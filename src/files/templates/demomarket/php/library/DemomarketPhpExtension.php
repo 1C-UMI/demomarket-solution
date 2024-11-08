@@ -2076,7 +2076,7 @@
 			$level = 1;
 
 			try {
-				$data = $this->macros('catalog', 'getSmartFilters', [$template, $categoryId, $isAdaptive, $level]);
+				$data = $this->macros('catalog', 'getSmartFilters', [$categoryId, $template, $isAdaptive, $level]);
 			} catch (Exception $e) {
 				return null;
 			}
