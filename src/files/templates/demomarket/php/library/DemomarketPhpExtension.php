@@ -1381,8 +1381,8 @@
 			$propertyDataList = $this->getPropertyDataList($propertyList);
 
 			$length = umiCount($propertyDataList);
-			$firstHalf = array_slice($propertyDataList, 0, $length / 2);
-			$secondHalf = array_slice($propertyDataList, $length / 2);
+			$firstHalf = array_slice($propertyDataList, 0, (int) ($length / 2));
+			$secondHalf = array_slice($propertyDataList, (int) ($length / 2));
 
 			return [$firstHalf, $secondHalf];
 		}
