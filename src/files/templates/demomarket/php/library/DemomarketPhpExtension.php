@@ -3928,7 +3928,7 @@
 			$sliderCustomId = 'main';
 
 			try {
-				$data = $this->macros('umiSliders', 'getSlideListBySliderCustomId', [$template, $sliderCustomId]);
+				$data = $this->macros('umiSliders', 'getSlideListBySliderCustomId', [$sliderCustomId, $template]);
 			} catch (publicException $e) {
 				$data = [];
 			}
