@@ -2070,13 +2070,11 @@
 		 * @return array|null
 		 */
 		public function getSmartFilters(array $variables) {
-			$template = null;
 			$categoryId = $variables['pageId'];
-			$isAdaptive = false;
 			$level = 1;
 
 			try {
-				$data = $this->macros('catalog', 'getSmartFilters', [$categoryId, $template, $isAdaptive, $level]);
+				$data = $this->macros('catalog', 'getSmartFilters', [$categoryId, false, $level]);
 			} catch (Exception $e) {
 				return null;
 			}
