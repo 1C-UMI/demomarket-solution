@@ -1971,13 +1971,13 @@
 				'catalog',
 				'getSmartCatalog',
 				[
-					$template,
 					$categoryId,
 					$limit,
 					$ignorePaging,
 					$level,
 					$fieldName,
 					$isAscending,
+					$template
 				]
 			);
 		}
