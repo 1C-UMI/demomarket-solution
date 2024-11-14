@@ -1381,8 +1381,8 @@
 			$propertyDataList = $this->getPropertyDataList($propertyList);
 
 			$length = umiCount($propertyDataList);
-			$firstHalf = array_slice($propertyDataList, 0, $length / 2);
-			$secondHalf = array_slice($propertyDataList, $length / 2);
+			$firstHalf = array_slice($propertyDataList, 0, (int) ($length / 2));
+			$secondHalf = array_slice($propertyDataList, (int) ($length / 2));
 
 			return [$firstHalf, $secondHalf];
 		}
@@ -1971,13 +1971,13 @@
 				'catalog',
 				'getSmartCatalog',
 				[
-					$template,
 					$categoryId,
 					$limit,
 					$ignorePaging,
 					$level,
 					$fieldName,
 					$isAscending,
+					$template
 				]
 			);
 		}
@@ -2070,13 +2070,11 @@
 		 * @return array|null
 		 */
 		public function getSmartFilters(array $variables) {
-			$template = null;
 			$categoryId = $variables['pageId'];
-			$isAdaptive = false;
 			$level = 1;
 
 			try {
-				$data = $this->macros('catalog', 'getSmartFilters', [$template, $categoryId, $isAdaptive, $level]);
+				$data = $this->macros('catalog', 'getSmartFilters', [$categoryId, false, $level]);
 			} catch (Exception $e) {
 				return null;
 			}
@@ -3928,7 +3926,7 @@
 			$sliderCustomId = 'main';
 
 			try {
-				$data = $this->macros('umiSliders', 'getSlideListBySliderCustomId', [$template, $sliderCustomId]);
+				$data = $this->macros('umiSliders', 'getSlideListBySliderCustomId', [$sliderCustomId, $template]);
 			} catch (publicException $e) {
 				$data = [];
 			}

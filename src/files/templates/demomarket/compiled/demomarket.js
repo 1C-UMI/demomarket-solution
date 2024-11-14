@@ -1461,7 +1461,7 @@ site.filters = (function($) {
 	var _filterParamName = 'filter';
 
 	/** @type {String} Префикс запроса на получение данных фильтрации */
-	var _baseUrl = '/udata://catalog/getSmartFilters//';
+	var _baseUrl = '/udata://catalog/getSmartFilters/';
 
 	/** @type {String} ID категории, по которой выполняется фильтрация */
 	var _categoryId;
