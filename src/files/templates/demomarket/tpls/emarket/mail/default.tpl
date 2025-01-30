@@ -25,4 +25,16 @@ END;
 			
 			
 END;
+
+	$FORMS['abandoned_cart_notification_subject'] = <<<END
+		Ваши товары ждут в корзине
+END;
+
+	$FORMS['abandoned_cart_notification_content'] = <<<END
+		Здравствуйте.<br/>
+		Недавно Вы присмотрели товары в нашем интернет-магазине и добавили их в <a href="%domain%/emarket/cart">корзину</a>, но так и не оформили заказ.<br/>
+		Стоит поспешить, ведь стоимость и наличие товаров могут измениться.
+		<hr/>
+		<span style="font-size: 8pt; color: #999999;">Если Вы больше не хотите получать письма о забытых товарах в корзине, можете <a href="%unsubscribe_link%" style="color: #999999;">отписаться</a> от данной рассылки.</span>
+END;
 ?>
