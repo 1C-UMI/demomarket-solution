@@ -82,4 +82,34 @@
 		</xsl:attribute>
 	</xsl:template>
 
+	<xsl:template match="abandoned_cart_notification_subject">
+		<xsl:text>Ваши товары ждут в корзине</xsl:text>
+	</xsl:template>
+
+	<xsl:template match="abandoned_cart_notification_content">
+		<p>
+			<xsl:text>Здравствуйте.</xsl:text>
+		</p>
+		<p>
+			<xsl:text>Недавно Вы присмотрели товары в нашем интернет-магазине и добавили их в </xsl:text>
+			<a href="{domain}/emarket/cart">
+				<xsl:text>корзину</xsl:text>
+			</a>
+			<xsl:text>, но так и не оформили заказ.</xsl:text>
+		</p>
+		<p>
+			<xsl:text>Стоит поспешить, ведь стоимость и наличие товаров могут измениться.</xsl:text>
+		</p>
+		<hr/>
+		<p>
+			<span style="font-size: 8pt; color: #999999;">
+				<xsl:text>Если Вы больше не хотите получать письма о забытых товарах в корзине, можете </xsl:text>
+				<a href="{unsubscribe_link}" style="color: #999999;">
+					<xsl:text>отписаться</xsl:text>
+				</a>
+				<xsl:text> от данной рассылки.</xsl:text>
+			</span>
+		</p>
+	</xsl:template>
+
 </xsl:stylesheet>
