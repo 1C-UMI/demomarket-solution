@@ -335,5 +335,8 @@
 		'INN' => 'ITN',
 		'KPP' => 'IEC',
 		'legal_person_email' => 'E-mail',
-		'error-empty-fields' => 'The required fields didn\'t fill'
+		'error-empty-fields' => 'The required fields didn\'t fill',
+
+		'unsubscribe-abandoned-cart-notification-fail' => 'An error occurred when unsubscribing',
+		'unsubscribe-abandoned-cart-notification-success' => 'You have successfully unsubscribed'
 	];
