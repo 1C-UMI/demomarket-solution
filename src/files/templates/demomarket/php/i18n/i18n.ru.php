@@ -336,5 +336,8 @@
 		'INN' => 'ИНН',
 		'KPP' => 'КПП',
 		'legal_person_email' => 'E-mail для доставки счета',
-		'error-empty-fields' => 'Не заполнены обязательные поля'
+		'error-empty-fields' => 'Не заполнены обязательные поля',
+
+		'unsubscribe-abandoned-cart-notification-fail' => 'Не удалось отписаться от рассылки',
+		'unsubscribe-abandoned-cart-notification-success' => 'Вы успешно отписались от рассылки'
 	];
