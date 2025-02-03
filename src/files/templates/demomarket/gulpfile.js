@@ -6,7 +6,7 @@
  * $ gulp
  *
  * При отсутствии файла styles/skins/modern/data/modules/umiPushNotification/js/gen/site-push.min.js
- * можно дабавить его из репозитория: https://github.com/Umisoft/push-notification-module/blob/master/src/styles/skins/modern/data/modules/umiPushNotification/js/gen/site-push.min.js
+ * можно дабавить его из репозитория: https://github.com/1C-UMI/push-notification-module/blob/master/src/styles/skins/modern/data/modules/umiPushNotification/js/gen/site-push.min.js
  *
  * 2) Режим разработки, ресурсы автоматически пересобираются при сохранении исходных файлов:
  * $ gulp watch

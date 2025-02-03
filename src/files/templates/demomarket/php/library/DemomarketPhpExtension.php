@@ -1971,13 +1971,13 @@
 				'catalog',
 				'getSmartCatalog',
 				[
+					$template,
 					$categoryId,
 					$limit,
 					$ignorePaging,
 					$level,
 					$fieldName,
-					$isAscending,
-					$template
+					$isAscending
 				]
 			);
 		}
@@ -2070,11 +2070,8 @@
 		 * @return array|null
 		 */
 		public function getSmartFilters(array $variables) {
-			$categoryId = $variables['pageId'];
-			$level = 1;
-
 			try {
-				$data = $this->macros('catalog', 'getSmartFilters', [$categoryId, false, $level]);
+				$data = $this->macros('catalog', 'getSmartFilters', [null, $variables['pageId'], false, 1]);
 			} catch (Exception $e) {
 				return null;
 			}
@@ -3922,11 +3919,8 @@
 		 * @throws Exception
 		 */
 		public function getSlides() {
-			$template = null;
-			$sliderCustomId = 'main';
-
 			try {
-				$data = $this->macros('umiSliders', 'getSlideListBySliderCustomId', [$sliderCustomId, $template]);
+				$data = $this->macros('umiSliders', 'getSlideListBySliderCustomId', [null, 'main']);
 			} catch (publicException $e) {
 				$data = [];
 			}
