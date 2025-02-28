@@ -97,7 +97,7 @@ site.TradeOffers = {
 	 * @returns {*|jQuery|HTMLElement}
 	 */
 	getBuyButtonList: function() {
-		return $('a.add_to_cart_button, a.buy_one_click_button');
+		return $('.purchase_manage-btn > a.add_to_cart_button, .purchase_manage-btn > a.buy_one_click_button');
 	},
 
 	/** Переключает активность кнопок помещения товара в корзину */
